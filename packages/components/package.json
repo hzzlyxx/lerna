@@ -1,0 +1,52 @@
+{
+  "name": "@hzzlyxx/components",
+  "version": "1.0.0",
+  "description": "components",
+  "author": "hzzly <hjingren@aliyun.com>",
+  "homepage": "https://github.com/hzzlyxx/lerna#readme",
+  "license": "MIT",
+  "main": "es/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.js",
+  "keywords": [
+    "hzzlyxx",
+    "components"
+  ],
+  "files": [
+    "es",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hzzlyxx/lerna.git"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.build.json && gulp -f ./build/gulpfile.js",
+    "clean": "rimraf es"
+  },
+  "bugs": {
+    "url": "https://github.com/hzzlyxx/lerna/issues"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "autoprefixer": "^10.2.5",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-css-base64": "^2.0.0",
+    "gulp-dart-sass": "^1.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1"
+  }
+}

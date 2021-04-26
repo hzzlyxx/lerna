@@ -1,0 +1,76 @@
+%clearfix {
+  &:after {
+    content: '';
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+  }
+
+  zoom: 1;
+}
+
+%textpoint {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin m_opacity($x) {
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + $x * 100+')';
+  filter: alpha(opacity=$x * 100);
+  opacity: $x;
+}
+
+%grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+@mixin large-screen() {
+  @at-root body.m-large-screen & {
+    @content;
+  }
+}
+
+/*滚动条*/
+@mixin scrollBar($color: #fff, $barColor: #e1e4e7, $size: 6px) {
+  scrollbar-track-color: transparent;
+
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+    background: $color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: $barColor;
+  }
+
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+
+  &::-moz-scrollbar {
+    width: $size;
+    background: $color;
+  }
+
+  &::-moz-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-moz-scrollbar-thumb {
+    border-radius: 5px;
+    background: $barColor;
+  }
+
+  &::-moz-scrollbar-corner {
+    display: none;
+  }
+}

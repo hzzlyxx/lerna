@@ -1,0 +1,30 @@
+# node_modules
+node_modules
+
+# es
+es
+
+# build
+build
+
+# release
+release
+
+# lib
+lib
+
+# dist
+dist
+
+# example
+example
+
+# public
+public
+
+**/*.md
+**/*.html
+**/*.svg
+
+# d.ts
+*.d.ts
